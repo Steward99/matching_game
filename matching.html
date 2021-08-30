@@ -9,6 +9,17 @@
 </head>
 <body>
     <h1 class="game-title">MATCH - OR - LOSE</h1>
+    <div class="overlay-page visible">
+        Click to Start
+    </div>
+    <div id="game-over-page" class="overlay-page">
+        GAME OVER !!
+        <span class="overlay-page-small">Click to Restart</span>
+    </div>
+    <div id="victory-page" class="overlay-page">
+        VICTORY !!
+        <span class="overlay-page-small">Click to Restart</span>
+    </div>
     <div class="game-container">
         <div class="game-info-container">
             <div class="game-info">
@@ -18,22 +29,263 @@
                 Flips <span class="game-flips">0</span>
             </div>
         </div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="spider-web top-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web top-right-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/spider-web.png">
+                <img class="spider" src="/source/images/spider.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="spider-web top-left-web" src="/source/images/black-web.png">
+                <img class="spider-web top-right-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/black-web.png">
+                <img class="witch-hat card-img matched" src="/source/images/witch-hat.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="spider-web top-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web top-right-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/spider-web.png">
+                <img class="spider" src="/source/images/spider.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="spider-web top-left-web" src="/source/images/black-web.png">
+                <img class="spider-web top-right-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/black-web.png">
+                <img class="witch-hat card-img matched" src="/source/images/witch-hat.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="spider-web top-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web top-right-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/spider-web.png">
+                <img class="spider" src="/source/images/spider.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="spider-web top-left-web" src="/source/images/black-web.png">
+                <img class="spider-web top-right-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/black-web.png">
+                <img class="bat card-img matched" src="/source/images/bat.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="spider-web top-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web top-right-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/spider-web.png">
+                <img class="spider" src="/source/images/spider.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="spider-web top-left-web" src="/source/images/black-web.png">
+                <img class="spider-web top-right-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/black-web.png">
+                <img class="bat card-img matched" src="/source/images/bat.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="spider-web top-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web top-right-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/spider-web.png">
+                <img class="spider" src="/source/images/spider.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="spider-web top-left-web" src="/source/images/black-web.png">
+                <img class="spider-web top-right-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/black-web.png">
+                <img class="candle card-img matched" src="/source/images/candle.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="spider-web top-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web top-right-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/spider-web.png">
+                <img class="spider" src="/source/images/spider.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="spider-web top-left-web" src="/source/images/black-web.png">
+                <img class="spider-web top-right-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/black-web.png">
+                <img class="candle card-img matched" src="/source/images/candle.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="spider-web top-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web top-right-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/spider-web.png">
+                <img class="spider" src="/source/images/spider.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="spider-web top-left-web" src="/source/images/black-web.png">
+                <img class="spider-web top-right-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/black-web.png">
+                <img class="coffin card-img matched" src="/source/images/coffin.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="spider-web top-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web top-right-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/spider-web.png">
+                <img class="spider" src="/source/images/spider.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="spider-web top-left-web" src="/source/images/black-web.png">
+                <img class="spider-web top-right-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/black-web.png">
+                <img class="coffin card-img matched" src="/source/images/coffin.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="spider-web top-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web top-right-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/spider-web.png">
+                <img class="spider" src="/source/images/spider.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="spider-web top-left-web" src="/source/images/black-web.png">
+                <img class="spider-web top-right-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/black-web.png">
+                <img class="eye card-img matched" src="/source/images/eye.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="spider-web top-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web top-right-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/spider-web.png">
+                <img class="spider" src="/source/images/spider.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="spider-web top-left-web" src="/source/images/black-web.png">
+                <img class="spider-web top-right-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/black-web.png">
+                <img class="eye card-img matched" src="/source/images/eye.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="spider-web top-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web top-right-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/spider-web.png">
+                <img class="spider" src="/source/images/spider.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="spider-web top-left-web" src="/source/images/black-web.png">
+                <img class="spider-web top-right-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/black-web.png">
+                <img class="ghost card-img matched" src="/source/images/ghost.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="spider-web top-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web top-right-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/spider-web.png">
+                <img class="spider" src="/source/images/spider.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="spider-web top-left-web" src="/source/images/black-web.png">
+                <img class="spider-web top-right-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/black-web.png">
+                <img class="ghost card-img matched" src="/source/images/ghost.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="spider-web top-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web top-right-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/spider-web.png">
+                <img class="spider" src="/source/images/spider.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="spider-web top-left-web" src="/source/images/black-web.png">
+                <img class="spider-web top-right-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/black-web.png">
+                <img class="pumkin card-img matched" src="/source/images/pumkin.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="spider-web top-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web top-right-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/spider-web.png">
+                <img class="spider" src="/source/images/spider.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="spider-web top-left-web" src="/source/images/black-web.png">
+                <img class="spider-web top-right-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/black-web.png">
+                <img class="pumkin card-img matched" src="/source/images/pumkin.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="spider-web top-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web top-right-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/spider-web.png">
+                <img class="spider" src="/source/images/spider.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="spider-web top-left-web" src="/source/images/black-web.png">
+                <img class="spider-web top-right-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/black-web.png">
+                <img class="skull card-img matched" src="/source/images/skull.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="spider-web top-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web top-right-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/spider-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/spider-web.png">
+                <img class="spider" src="/source/images/spider.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="spider-web top-left-web" src="/source/images/black-web.png">
+                <img class="spider-web top-right-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-left-web" src="/source/images/black-web.png">
+                <img class="spider-web bottom-right-web" src="/source/images/black-web.png">
+                <img class="skull card-img matched" src="/source/images/skull.png">
+            </div>
+        </div>
+        
     </div>
 </body>
 </html>

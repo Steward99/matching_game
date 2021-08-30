@@ -9,6 +9,7 @@
 
 html{
     min-height: 100vh;
+    cursor: url(/source/cursor/Normal.cur), auto;
 }
 
 body{
@@ -29,6 +30,7 @@ body{
     grid-template-columns: repeat(4,auto);
     grid-gap: 20px;
     margin: 50px;
+    perspective: 500px;
 }
 
 .game-info-container{
@@ -43,9 +45,167 @@ body{
     color: #ffbb89;
 }
 
-
 .card{
-    width: 100px;
-    height: 150px;
+    width: 125px;
+    height: 175px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.card:hover{
+    cursor: url(/source/cursor/axe.cur), auto;
+}
+
+.card-face{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 12px;
+    border-width: 1px;
+    border-style: solid;
+    backface-visibility: hidden;
+    transition: transform 500ms ease-in-out;
+}
+
+.overlay-page{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: #ff6d00;
+    font-family: boo;
+}
+
+.overlay-page-small{
+    font-size: .3em;
+}
+
+.overlay-page.visible{
+    display: flex;
+    flex-direction: column;
+    animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow{
+    from{
+        background-color: rgba(0,0,0,
+        0.3);
+        font-size: 0;
+    }
+    to{
+        background-color: rgba(0,0,0,0.3);
+        font-size: 8em;
+    }
+}
+
+.card.visible .card-back{
+    transform: rotateY(180deg);
+}
+
+.card.visible .card-front{
+    transform: rotateY(0);
+}
+
+.card:hover .card-img{
+    animation: dancing 1s linear infinite 500ms;
+}
+
+@keyframes dancing{
+    0%,100%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(45deg);
+    }
+    75%{
+        transform: rotate(-45deg);
+    }
+}
+
+.card-front{
+    background-color: #ffbb89;
+    border-color: black;
+    transform: rotateY(-180deg);
+}
+
+.card-back{
     background-color: black;
+    border-color: #ff6d00;
+}
+
+.spider-web{
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    transition: width 100ms ease-in-out, height 100ms ease-in-out;
+}
+
+.card-face:hover .spider-web{
+    width: 52px;
+    height: 52px;
+}
+
+.top-left-web{
+    top: 0;
+    left: 0;
+}
+
+.top-right-web{
+    transform: rotate(90deg);
+    top: 0;
+    right: 0;
+}
+
+.bottom-right-web{
+    transform: rotate(180deg);
+    bottom: 0;
+    right: 0;
+}
+
+.bottom-left-web{
+    transform: rotate(270deg);
+    bottom: 0;
+    left: 0;
+}
+
+.spider{
+    position: absolute;
+    display: flex;
+    align-self: flex-start;
+    transform: translateY(-10px);
+    transition: transform 100ms ease-in-out;
+}
+
+.spider:hover{
+    transform: translateY(0);
+}
+
+.card-img{
+    transition: transform 100ms ease-in-out;
+    transform: scale(.9);
+}
+
+.card-front:hover .card-img{
+    transform: scale(1);
+}
+
+
+@media (max-width: 600px) {
+    .game-container{
+        grid-template-columns: repeat(2,auto);
+    }
+
+    .game-info-container{
+        flex-direction: column;
+        align-items: center;
+    }
 }
