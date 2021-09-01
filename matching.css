@@ -9,7 +9,7 @@
 
 html{
     min-height: 100vh;
-    cursor: url(/source/cursor/Normal.cur), auto;
+    cursor: url(/source/cursor/Normal.cur),auto;
 }
 
 body{
@@ -102,7 +102,7 @@ body{
         font-size: 0;
     }
     to{
-        background-color: rgba(0,0,0,0.3);
+        background-color: rgba(0,0,0,0.8);
         font-size: 8em;
     }
 }
@@ -115,7 +115,7 @@ body{
     transform: rotateY(0);
 }
 
-.card:hover .card-img{
+.card.matched .card-img{
     animation: dancing 1s linear infinite 500ms;
 }
 
